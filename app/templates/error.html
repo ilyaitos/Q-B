@@ -1,0 +1,44 @@
+{% extends "comon.html" %}
+
+
+
+{% block content_2 %}
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" class="mx-2" action="/reg">
+    <h2 class='m'>Регистрация </h2>
+    <input type="text" name="login" id="111">
+    <input type="password" name="password" id="222">
+    <input type="password2" name="password2">
+    <input type="submit" id="id45">
+</form>
+
+<h3 align='center' class="text-info" >
+{% if w  %} Привет {{ user }}
+{% else %}Пожалуйста, войдите на сайт!{% endif %}
+</h3>
+
+
+
+<form method="post" class="mx-2" action="/ap">
+    <input type="text" name="user">
+    <input type="password" name="password">
+    <input type="submit">
+</form>
+
+<form method="post" action="/zzz">
+    <button class="btn btn-warning mx-2 m-2">Выход</button>
+</form>
+
+
+{% load i18n %}
+<h2>{{ title }}</h2>
+<h2>{% trans "Привет" %}</h2>
+
+
+
+{% endblock %}
+
